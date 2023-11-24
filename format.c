@@ -28,8 +28,6 @@
 #include "prefs.h"
 #include "process.h"
 
-extern GeanyFunctions *geany_functions;
-
 static GPtrArray *format_arguments(size_t cursor, size_t offset, size_t length,
                                    bool xml_replacements)
 {
