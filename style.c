@@ -30,19 +30,17 @@ static struct
   const char *name;
   const char *label;
   const char *cmd_name;
-} fmt_style_info[] = { { "custom", "Custom '.clang-format' File", "file" },
-                       { "llvm", "LLVM", "LLVM" },
-                       { "google", "Google", "Google" },
-                       { "chromium", "Chromium", "Chromium" },
-                       { "mozilla", "Mozilla", "Mozilla" },
-                       { "webkit", "WebKit", "WebKit" },
-                       // ...
+} fmt_style_info[] = {
+  { "custom", "Custom '.clang-format' File", "file" },
+  { "llvm", "LLVM", "LLVM" },
+  { "google", "Google", "Google" },
+  { "chromium", "Chromium", "Chromium" },
+  { "mozilla", "Mozilla", "Mozilla" },
+  { "webkit", "WebKit", "WebKit" },
+  // ...
 };
 
-size_t fmt_style_get_count(void)
-{
-  return G_N_ELEMENTS(fmt_style_info);
-}
+size_t fmt_style_get_count(void) { return G_N_ELEMENTS(fmt_style_info); }
 
 FmtStyle fmt_style_from_name(const char *name)
 {

@@ -24,9 +24,9 @@
 #endif
 
 #include "format.h"
+#include "plugin.h"
 #include "prefs.h"
 #include "style.h"
-#include "plugin.h"
 
 #ifndef _
 #define _(s) s
@@ -402,6 +402,6 @@ static void do_format_session(void)
   {
     GeanyDocument *doc = documents[i];
     if (fmt_is_supported_ft(doc))
-        do_format(doc, true, false);
+      do_format(doc, true, false);
   }
 }

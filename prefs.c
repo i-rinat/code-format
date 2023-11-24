@@ -23,8 +23,8 @@
 #include "config.h"
 #endif
 
-#include "prefs.h"
 #include "format.h"
+#include "prefs.h"
 
 #define PREF_GROUP "code-format"
 #define PREF_PATH "clang-format-path"
@@ -206,10 +206,7 @@ void fmt_prefs_close_project(void)
   cur_prefs = &user_prefs;
 }
 
-void fmt_prefs_save_project(GKeyFile *kf)
-{
-  save_prefs(&proj_prefs, kf);
-}
+void fmt_prefs_save_project(GKeyFile *kf) { save_prefs(&proj_prefs, kf); }
 
 void fmt_prefs_save_user(void)
 {
@@ -238,50 +235,32 @@ void fmt_prefs_save_user(void)
   g_key_file_free(kf);
 }
 
-const char *fmt_prefs_get_path(void)
-{
-  return cur_prefs->path->str;
-}
+const char *fmt_prefs_get_path(void) { return cur_prefs->path->str; }
 
 void fmt_prefs_set_path(const char *fn)
 {
   g_string_assign(cur_prefs->path, fn);
 }
 
-FmtStyle fmt_prefs_get_style(void)
-{
-  return cur_prefs->style;
-}
+FmtStyle fmt_prefs_get_style(void) { return cur_prefs->style; }
 
-void fmt_prefs_set_style(FmtStyle style)
-{
-  cur_prefs->style = style;
-}
+void fmt_prefs_set_style(FmtStyle style) { cur_prefs->style = style; }
 
-bool fmt_prefs_get_auto_format(void)
-{
-  return cur_prefs->auto_format;
-}
+bool fmt_prefs_get_auto_format(void) { return cur_prefs->auto_format; }
 
 void fmt_prefs_set_auto_format(bool auto_format)
 {
   cur_prefs->auto_format = auto_format;
 }
 
-const char *fmt_prefs_get_trigger(void)
-{
-  return cur_prefs->trigger->str;
-}
+const char *fmt_prefs_get_trigger(void) { return cur_prefs->trigger->str; }
 
 void fmt_prefs_set_trigger(const char *trigger_chars)
 {
   g_string_assign(cur_prefs->trigger, trigger_chars);
 }
 
-bool fmt_prefs_get_format_on_save(void)
-{
-  return cur_prefs->on_save;
-}
+bool fmt_prefs_get_format_on_save(void) { return cur_prefs->on_save; }
 
 void fmt_prefs_set_format_on_save(bool on_save)
 {

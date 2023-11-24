@@ -22,8 +22,8 @@
 #ifndef FMT_PREFS_H
 #define FMT_PREFS_H
 
-#include "style.h"
 #include "plugin.h"
+#include "style.h"
 
 G_BEGIN_DECLS
 
